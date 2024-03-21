@@ -23,6 +23,8 @@ export default async function spiceFileRecordParser (path: string): Promise<Spic
   const { buffer, bytesRead } = await handler.read(Buffer.alloc(FILE_RECORD_LENGTH), OFFSET, FILE_RECORD_LENGTH, POSITION)
   const value = buffer.toString('utf8', 0, bytesRead)
 
+  await handler.close()
+
   const FileArchitecture = value.slice(0, 3) as 'DAF'
   const IdWord = value.slice(0, 8)
   const ND = littleEndianBytesToInt(new Uint8Array([...value.slice(8, 12)].map(char => char.charCodeAt(0))))
