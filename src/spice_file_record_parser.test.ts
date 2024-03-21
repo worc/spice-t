@@ -1,4 +1,4 @@
-import { describe, expect, jest, test } from '@jest/globals'
+import { describe, expect, test } from '@jest/globals'
 import spiceFileRecordParser from './spice_file_record_parser'
 
 // Relative to project root
