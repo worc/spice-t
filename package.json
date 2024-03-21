@@ -1,0 +1,18 @@
+{
+  "name": "spice-t",
+  "version": "0.0.0--ignored",
+  "description": "Typescript implementation of JPL's SPICE toolkit",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "curtis mcallister",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30"
+  }
+}
