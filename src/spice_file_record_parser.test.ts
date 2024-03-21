@@ -5,7 +5,7 @@ import spiceFileRecordParser from './spice_file_record_parser'
 const DE_202_PATH = 'kernels/de202.bsp'
 
 describe('spiceFileRecordParser', () => {
-  test('should return a file record with values for every field', async () => {
+  test('parsing de202.bsp should return the correct values', async () => {
     const result = await spiceFileRecordParser(DE_202_PATH)
     expect(result.FileArchitecture).toEqual('DAF')
     expect(result.IdWord).toEqual('DAF/SPK ')
